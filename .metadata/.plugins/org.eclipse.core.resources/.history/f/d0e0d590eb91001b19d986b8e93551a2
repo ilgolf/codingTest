@@ -1,0 +1,58 @@
+package programmers;
+
+public class Kakao2021_01 {
+	String str = "";
+	
+	public String solution(String new_id) {
+		str = new_id.toLowerCase();
+		String answer = "";
+		
+		for(int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if('a' <= ch && ch <= 'z' || '0' <= ch && ch <= '9' || ch == '_' || ch == '-'
+					|| ch == '.') {
+				answer += str.charAt(i);
+			}
+		}
+		
+		System.out.println(answer);
+		
+		String step3 = answer.toString().replace("..", ".");
+        while (step3.contains("..")) {
+            step3 = step3.replace("..", ".");
+        }
+        
+        String step4 = step3;
+        if (step4.length() > 0) {
+            if (step4.charAt(0) == '.') {
+                step4 = step4.substring(1, step4.length());
+            }
+        }
+        if (step4.length() > 0) {
+            if (step4.charAt(step4.length() - 1) == '.') {
+                step4 = step4.substring(0, step4.length() - 1);
+            }
+        }
+        
+        answer = step4;
+        
+        if(answer.equals("")) answer += "a";
+        
+        if(answer.length() > 15) answer = answer.substring(0, 15);
+        
+        while(answer.length() <= 2) {
+        	answer += answer.charAt(answer.length() - 1);
+        }
+        
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		String new_id = "z-+.^.";
+		
+		Kakao2021_01 k = new Kakao2021_01();
+		
+		String answer = k.solution(new_id);
+		System.out.println(answer);
+	}
+}

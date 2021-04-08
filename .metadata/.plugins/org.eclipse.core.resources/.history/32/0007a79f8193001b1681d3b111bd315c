@@ -1,0 +1,47 @@
+package programmers;
+
+import java.util.*;
+
+public class Kakao2020_02 {
+	int pos;
+	
+	boolean isCorrect(String str) {
+		boolean ret = true;
+		int left = 0, right = 0;
+		Stack<Character> stack = new Stack<>();
+		
+		for(int i=0; i<str.length(); i++) {
+			if(str.charAt(i) == '(') {
+				left ++;
+				stack.push('(');
+			} else {
+				right ++;
+				if(stack.empty()) ret = false;
+				else stack.pop();
+			}
+			if(left == right) {
+				pos = i + 1;
+				return ret;
+			}
+		}
+		
+		return true;
+	}
+	
+	public String solution(String p) {
+		if(p.isEmpty()) return p;
+		
+		
+		String answer = "";
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		String p = ")(";
+		
+		Kakao2020_02 k = new Kakao2020_02();
+		
+		String answer = k.solution(p);
+		System.out.println(answer);
+	}
+}

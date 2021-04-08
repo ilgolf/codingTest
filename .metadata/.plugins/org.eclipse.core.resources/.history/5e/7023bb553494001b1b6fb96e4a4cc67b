@@ -1,0 +1,20 @@
+package programmers;
+
+import java.util.*;
+
+class Solution {
+	
+    public int solution(int[][] needs, int r) {
+    	int answer = 0;
+    	return answer;
+    }
+    
+    public static void main(String[] args) {
+		int[][] gc = {{ 1, 0, 0 }, {1, 1, 0}, {1, 1, 0}, {1, 0, 1}, {1, 1, 0}, {0, 1, 1}};
+		int r = 2;
+		
+		Solution s = new Solution();
+		int answer = s.solution(gc, r);
+		System.out.println(answer);
+	}
+}

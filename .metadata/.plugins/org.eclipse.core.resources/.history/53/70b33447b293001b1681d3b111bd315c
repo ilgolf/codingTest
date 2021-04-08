@@ -1,0 +1,28 @@
+package programmers;
+
+import java.util.*;
+
+public class Kakao2020_05 {
+	
+	public int[][] solution(int n, int[][] build_frame) {
+	}
+	
+	public static void main(String[] args) {
+		int n = 5;
+		int[][] build_frame = {
+				{1,0,0,1},
+				{1,1,1,1},
+				{2,1,0,1},
+				{2,2,1,1},
+				{5,0,0,1},
+				{5,1,0,1},
+				{4,2,1,1},
+				{3,2,1,1}
+		};
+		
+		Kakao2020_05 k = new Kakao2020_05();
+		
+		int[][] answer = k.solution(n, build_frame);
+		System.out.println(Arrays.deepToString(answer));
+	}
+}

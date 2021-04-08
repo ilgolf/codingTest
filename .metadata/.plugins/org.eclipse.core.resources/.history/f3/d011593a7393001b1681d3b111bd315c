@@ -1,0 +1,18 @@
+package programmers;
+
+import java.util.*;
+
+public class Kakao2021_08 {
+	
+	List<Integer>[] list = new ArrayList[300005];
+	List<Integer> s = new ArrayList<>();
+	
+	public int solution(int[] sales, int[][] links) {
+        int answer = 0;
+        return answer;
+    }
+	
+	public static void main(String[] args) {
+
+	}
+}

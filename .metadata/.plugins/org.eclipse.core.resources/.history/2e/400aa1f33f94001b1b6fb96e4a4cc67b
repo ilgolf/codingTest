@@ -1,0 +1,35 @@
+package solution;
+
+class Solution01 {
+	
+	int count = 0;
+	int[][] Needs;
+	
+	void find(int x, int y) {
+		for(int i=0; i<Needs.length; i++) {
+			
+		}
+	}
+	
+    public int solution(int[][] needs, int r) {
+    	Needs = needs;
+    	
+    	for(int i=0; i<needs.length; i++) {
+    		for(int j=i; j<r; j++) {
+    			find(i, i+1);
+    		}
+    	}
+    	
+    	int answer = count;
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+		int[][] needs = { { 1, 0, 0 }, {1, 1, 0}, {1, 1, 0}, {1, 0, 1}, {1, 1, 0}, {0, 1, 1} };
+		int r = 2;
+		
+		Solution01 s = new Solution01();
+		int answer =  s.solution(needs, r);
+		System.out.println(answer);
+	}
+}

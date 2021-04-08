@@ -1,0 +1,33 @@
+package programmers;
+
+public class Kakao2021_01 {
+	String str = "";
+	
+	public String solution(String new_id) {
+		str = new_id.toLowerCase();
+		String answer = "";
+		
+		for(int i=0; i<str.length(); i++) {
+			if(Character.isLetter(str.charAt(i)) || str.charAt(i) == '-' || str.charAt(i) == '_'
+					|| str.charAt(i) == '.') {
+				answer += str.charAt(i);
+			}
+		}
+		
+		String step3 = answer.toString().replace("..", ".");
+        while (step3.contains("..")) {
+            step3 = step3.replace("..", ".");
+        }
+        
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		String new_id = "...!@BaT#*..y.abcdefghijklm";
+		
+		Kakao2021_01 k = new Kakao2021_01();
+		
+		String answer = k.solution(new_id);
+		System.out.println(answer);
+	}
+}

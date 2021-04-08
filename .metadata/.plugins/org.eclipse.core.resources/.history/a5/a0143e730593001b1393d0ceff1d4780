@@ -1,0 +1,38 @@
+package programmers;
+
+public class Kakao2021_06 {
+	int[][] Board;
+	static final int INF = (int)1e9;
+	
+	class Point {
+		Point(int r, int c, int t) {
+			row = r;
+			col = c;
+			cnt = t;
+		}
+		
+		int row, col, cnt;
+	}
+	
+	int permutate(Point src) {
+		int ret = INF;
+		
+		return ret;
+	}
+	
+	public int solution(int[][] board, int r, int c) {
+		Board = board;
+		return permutate(new Point(r, c, 0));
+	}
+
+	public static void main(String[] args) {
+		int[][] board = { { 1, 0, 0, 3 }, { 2, 0, 0, 0 }, { 0, 0, 0, 2 }, { 3, 0, 1, 0 } };
+
+		int r = 1;
+		int c = 0;
+
+		Kakao2021_06 k = new Kakao2021_06();
+		int answer = k.solution(board, r, c);
+		System.out.println(answer);
+	}
+}

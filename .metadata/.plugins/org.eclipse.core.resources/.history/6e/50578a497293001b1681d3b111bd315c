@@ -1,0 +1,13 @@
+package programmers;
+
+public class Kakao2021_08 {
+	
+	public int solution(int[] sales, int[][] links) {
+        int answer = 0;
+        return answer;
+    }
+	
+	public static void main(String[] args) {
+
+	}
+}

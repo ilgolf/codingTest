@@ -1,0 +1,9 @@
+package programmers;
+
+import java.util.*;
+
+class Solution {
+    public int solution(int[] gift_cards, int[] wants) {
+    	Arrays.sort(gift_cards);
+    }
+}

@@ -1,0 +1,16 @@
+package programmers;
+
+public class Kakao2020_02 {
+
+	public String solution(String p) {
+	}
+
+	public static void main(String[] args) {
+		String p = ")(";
+		
+		Kakao2020_02 k = new Kakao2020_02();
+		
+		String answer = k.solution(p);
+		System.out.println(answer);
+	}
+}

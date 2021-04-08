@@ -1,0 +1,44 @@
+package programmers;
+
+import java.util.*;
+
+import programmers.Kakao2020_04.Trie;
+
+class Solution {
+	
+	class Node {
+		int x, y; // stop
+		int cust; // custom cnt
+		int cnt; // stop cnt
+		
+		Node(int x, int y, int cust) {
+			this.x = x;
+			this.y = y;
+			this.cust = cust;
+		}
+	}
+	
+	Node[] tree = new Node[100002];
+
+	public int[] solution(int n, int[] passenger, int[][] train) {
+		
+		for(int i=1; i<train.length; i++) {
+			for(int j=1; j<train[i].length; j++) {
+				tree[i] = new Node(i, j, passenger[i]);
+			}
+		}
+		
+		int[] answer = {};
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		int[] passanger = { 1,1,1,1,1,1 };
+		int n = 6;
+		int[][] train = {{1,2},{1,3},{1,4},{3,5},{3,6}};
+
+		Solution s = new Solution();
+		int[] answer = s.solution(n, passanger, train);
+		System.out.println(Arrays.toString(answer));
+	}
+}

@@ -1,0 +1,57 @@
+package programmers;
+
+public class Kakao2021_01 {
+	String str = "";
+	
+	public String solution(String new_id) {
+		str = new_id.toLowerCase();
+		String answer = "";
+		
+		for(int i=0; i<str.length(); i++) {
+			char ch = str.charAt(i);
+			if('a' <= ch && ch <= 'z' || '0' <= ch && ch <= '9' || ch == '_' || ch == '-'
+					|| ch == '.') {
+				answer += str.charAt(i);
+			}
+		}
+		
+		System.out.println(answer);
+		
+		String step3 = answer.toString().replace("..", ".");
+        while (step3.contains("..")) {
+            step3 = step3.replace("..", ".");
+        }
+        
+        answer = step3;
+        
+        if (answer.length() > 0) {
+            if (answer.charAt(0) == '.') {
+                answer = answer.substring(1, answer.length());
+            }
+        }
+        if (answer.length() > 0) {
+            if (answer.charAt(answer.length() - 1) == '.') {
+                answer = answer.substring(0, answer.length() - 1);
+            }
+        }
+        
+        if(answer.equals("")) answer += "a";
+        
+        if(answer.length() > 15) answer = answer.substring(0, 15);
+        
+        while(answer.length() <= 2) {
+        	answer += answer.charAt(answer.length() - 1);
+        }
+        
+		return answer;
+	}
+
+	public static void main(String[] args) {
+		String new_id = "...!@BaT#*..y.abcdefghijklm";
+		
+		Kakao2021_01 k = new Kakao2021_01();
+		
+		String answer = k.solution(new_id);
+		System.out.println(answer);
+	}
+}

@@ -1,0 +1,12 @@
+package programmers;
+
+public class Kakao2021_03 {
+
+	public int[] solution(String[] info, String[] query) {
+        int[] answer = {};
+        return answer;
+    }
+	
+	public static void main(String[] args) {
+	}
+}

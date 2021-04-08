@@ -1,0 +1,37 @@
+package programmers;
+
+import java.util.*;
+
+public class Kakao2021_02 {
+	List<Map<String, Integer>> foodmaps = new ArrayList<>();
+	int[] MaxCnt = new int[11];
+	
+	void comb(char[] str, int pos, StringBuilder sb) {
+		if(pos >= str.length) {
+			int len = sb.length();
+			if(len >= 2) {
+				int cnt = foodmaps.get(len).get(sb.toString()) + 1;
+			}
+			return;
+		}
+	}
+	
+	public String[] solution(String[] orders, int[] course) {
+		
+		for(int i=0; i<11; i++) {
+			foodmaps.add(new HashMap<String, Integer>());
+		}
+		
+		for(String str : orders) {
+			char[] arr = str.toCharArray();
+			Arrays.sort(arr);
+			comb(arr, 0, new StringBuilder());
+		}
+		
+		String[] answer = {};
+		return answer;
+	}
+	
+	public static void main(String[] args) {
+	}
+}

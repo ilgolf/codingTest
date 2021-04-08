@@ -1,0 +1,21 @@
+package programmers;
+
+import java.util.Arrays;
+
+public class Kakao2020_04 {
+
+	public static int[] solution(String[] words, String[] queries) {
+		int[] answer = {};
+
+		return answer;
+	}
+
+	public static void main(String[] args) {
+
+		String[] words = { "frodo", "front", "frost", "frozen", "frame", "kakao" };
+		String[] queries = { "fro??", "????o", "fr???", "fro???", "pro?" };
+
+		int[] answer = solution(words, queries);
+		System.out.println(Arrays.toString(answer));
+	}
+}

@@ -1,0 +1,17 @@
+package solution;
+
+class Solution01 {
+    public int solution(int[][] needs, int r) {
+        int answer = 0;
+        return answer;
+    }
+    
+    public static void main(String[] args) {
+		int[][] needs = { { 1, 0, 0 }, {1, 1, 0}, {1, 1, 0}, {1, 0, 1}, {1, 1, 0}, {0, 1, 1} };
+		int r = 2;
+		
+		Solution01 s = new Solution01();
+		int answer =  s.solution(needs, r);
+		System.out.println(answer);
+	}
+}
